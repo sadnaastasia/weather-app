@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+body,
+:root {
+  @apply text-fuchsia-800 w-full h-full flex justify-center items-center bg-gradient-to-t from-indigo-300 via-purple-400
+    to-pink-400;
+}
