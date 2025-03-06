@@ -9,7 +9,9 @@ function App() {
       <InputBlock />
       <LoadingStatus />
       <ChartBlock />
-      <OutputBlock />
+      <div className="relative">
+        <OutputBlock />
+      </div>
     </div>
   );
 }

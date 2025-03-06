@@ -10,7 +10,7 @@ function LoadingStatus() {
         <AiOutlineLoading className="my-10 animate-spin w-full py-10 h-60" />
       )}
       {error && (
-        <div className="my-10 flex place-items-center h-60">
+        <div className="px-2 my-10 flex place-items-center h-60">
           <p className="w-full text-lg text-white bg-red-500/50 py-5 text-center rounded-lg shadow-lg">
             {error}
           </p>

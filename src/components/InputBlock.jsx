@@ -19,7 +19,7 @@ function InputBlock() {
 
   return (
     <div
-      className="flex justify-around bg-fuchsia-200/50 rounded-lg shadow-xl p-5"
+      className="w-[300px] md:w-full flex justify-around items-start bg-fuchsia-200/50 mx-3 rounded-lg shadow-xl p-5"
       onKeyDownCapture={keyHandler}
     >
       <input

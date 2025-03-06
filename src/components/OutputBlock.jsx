@@ -30,21 +30,23 @@ function Icon({ iconType }) {
 
 function OutputBlock() {
   const data = useSelector((store) => store.weather.data);
+  const error = useSelector((store) => store.weather.error);
   return (
-    <div className="flex justify-start gap-x-5">
-      {data?.map((item) => {
-        return (
-          <div
-            className="bg-fuchsia-200/50 shadow-xl rounded-lg text-center px-5 py-2"
-            key={item.id}
-          >
-            <Icon iconType={item.iconType} />
-            <p className="p-5 pt-0 text-xl">{item.temp}&#186;C</p>
-            <hr className="border-fuchsia-800" />
-            <p className="p-5 text-base">{item.time}</p>
-          </div>
-        );
-      })}
+    <div className="absolute w-full h-max md:right-1/3  flex flex-col items-stretch justify-stretch md:flex-row md:mx-2 gap-x-5">
+      {!error &&
+        data?.map((item) => {
+          return (
+            <div
+              className="bg-fuchsia-200/50 shadow-xl rounded-lg text-center px-5 py-2 mb-2"
+              key={item.id}
+            >
+              <Icon iconType={item.iconType} />
+              <p className="p-5 pt-0 text-xl">{item.temp}&#186;C</p>
+              <hr className="border-fuchsia-800" />
+              <p className="p-5 text-base">{item.time}</p>
+            </div>
+          );
+        })}
     </div>
   );
 }
